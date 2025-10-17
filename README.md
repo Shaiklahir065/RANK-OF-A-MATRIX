@@ -7,16 +7,19 @@ To write a python program to find the rank of a matrix
 ### Step 1: 
 Start with the given matrix A
 ### Step 2: 
-Use elementary row operations (swap, multiply, add rows) to make it upper triangular (like stairs shape).
+Perform row operations (swap, multiply, or add multiples of rows) to simplify the matrix.
 ### Step 3: 
-Look at the first non-zero element in each row (called pivots).
+Convert the matrix into row-echelon form (upper triangular form where all entries below the main diagonal are zero).
 ### Step 4: 
-The number of rows that still have at least one non-zero entry after reduction = rank.
+Identify all non-zero rows in the row-echelon form.
 ### Step 5:
-That count is the rank of the matrix.
+The number of non-zero rows is the rank of the matrix.
 ## Program:
 
 ```python
+#Developed by:shaik lahir 
+#RegisterNumber:212224240148
+
 import numpy as np
 A=[[5,-3,-10],[2,2,-3],[-3,-1,5]]
 rank=np.linalg.matrix_rank(A)
